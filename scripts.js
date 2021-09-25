@@ -19,3 +19,18 @@ function round(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    let computerScore = 0;
+    let playerScore = 0;
+    for(let i = 0; i < 5; i++) {
+        const playerSelection = prompt();
+        const computerSelection = computerPlay();
+        result = round(playerSelection, computerSelection);
+        if (result === 'You are a winner!') {
+            playerScore++;
+        }
+        console.log("Your score is: " + playerScore);
+    }
+}
+
+game();
