@@ -1,0 +1,19 @@
+html * {
+    font-family: "Sofia", sans-serif;
+    background-color: rgb(1, 1, 126);
+}
+
+.heading {
+    text-align: center;
+    color: white;
+}
+
+.heading h1 {
+    font-size: xx-large;
+    padding-top: 100px;
+}
+
+.heading p {
+    font-size: large;
+}
+
