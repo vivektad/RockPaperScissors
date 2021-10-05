@@ -1,11 +1,8 @@
 html * {
     font-family: "Sofia", sans-serif;
     background-color: rgb(1, 1, 126);
-}
-
-.heading {
-    text-align: center;
     color: white;
+    text-align: center;
 }
 
 .heading h1 {
@@ -17,3 +14,23 @@ html * {
     font-size: large;
 }
 
+
+.arena {
+    background-color: white;
+    
+}
+
+.selector {
+    padding: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.selector button {
+    background-color: grey;
+    flex: 1;
+    height: 100px;
+    max-width: 200px;
+    border-radius: 10px;
+}
