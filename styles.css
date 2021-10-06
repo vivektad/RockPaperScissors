@@ -14,23 +14,42 @@ html * {
     font-size: large;
 }
 
-
 .arena {
-    background-color: white;
-    
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    font-size: medium;
+    max-width: 1000px;
+    justify-content: center;
+    border: 1px solid bisque;
+}
+
+.arena .currentTurn {
+    align-self: center;
+    flex-grow: 2;
+;}
+
+.arena #playerScore, .arena #computerScore {
+    padding: 20px;
+    border: 1px solid bisque;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .selector {
-    padding: 50px;
     display: flex;
+    padding: 50px;
     gap: 30px;
+    max-width: auto;
     justify-content: center;
 }
 
 .selector button {
     background-color: grey;
-    flex: 1;
+    flex: 1 1 0;
     height: 100px;
     max-width: 200px;
     border-radius: 10px;
 }
+
