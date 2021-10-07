@@ -1,36 +1,39 @@
+let computerScore = 0;
+let playerScore = 0;
+const playArea = document.querySelector('.change');
+const pScore = document.querySelector('#playerScore');
+const pContent = document.createElement('p');
+pContent.textContent = playerScore;
+pScore.append(pContent);
+const cScore = document.querySelector('#computerScore');
+let cContent = document.createElement('p');
+cContent.textContent = computerScore;
+cScore.append(cContent);
+
 function computerPlay() {
     let array = ['rock', 'paper', 'scissors']
     let randomNumber = Math.floor(Math.random()*3);
-    console.log(randomNumber);
     return array[randomNumber];
 }
 
 function round(playerSelection, computerSelection) {
     // not considering situation when the wrong information/spelling mistakes are inserted
-    playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection) {
         return 'There is no winner this round!';
     } else if (playerSelection === 'rock' && computerSelection === 'paper' ||
         playerSelection === 'paper' && computerSelection === 'scissors' ||
             playerSelection === 'scissors' && computerSelection === 'rock') {
-        return 'You Lose! Paper beats Rock';
+        computerScore++;
+        return 'You lost this round :(';
     } else {
+        playerScore++;
         return 'You are a winner!';
     }
 }
 
-function game() {
-    let computerScore = 0;
-    let playerScore = 0;
-    for(let i = 0; i < 5; i++) {
-        //const playerSelection = prompt();
-        const computerSelection = computerPlay();
-        result = round(playerSelection, computerSelection);
-        if (result === 'You are a winner!') {
-            playerScore++;
-        }
-        console.log("Your score is: " + playerScore);
-    }
-}
-
-game();
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const text = round(button.id, computerPlay());
+    })
+})

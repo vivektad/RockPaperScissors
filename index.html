@@ -7,7 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <title>RockPaperScissors</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <div class="heading">
@@ -20,24 +20,17 @@
     <div>
         <div class="arena">
             <div id="playerScore">
-                <div>
-                    Your Score
-                    <p>
-                        0
-                    </p>
-                </div>
+                <p>Your Score</p>
             </div>
             <div class="currentTurn">
                 <div><h2>Current Turn</h2></div>
-                <h3>
-                    It's Your Turn. Choose an option below
+                <h3 class="change">
+                    Click one of the options below <br>
+                    to challenge the fire lord
                 </h3>
             </div>
             <div id="computerScore">
-                <div>Fire Nation's Score</div>
-                <p>
-                    0
-                </p>
+                <p>Fire Nation's Score</p>
             </div>
         </div>
     </div>
