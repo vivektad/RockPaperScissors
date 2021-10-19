@@ -1,6 +1,6 @@
 html * {
     font-family: "Sofia", sans-serif;
-    background-color: rgb(1, 1, 126);
+    background-color: rgb(28, 107, 255);
     color: white;
     text-align: center;
 }
@@ -52,5 +52,9 @@ html * {
     height: 100px;
     max-width: 200px;
     border-radius: 10px;
+}
+
+.selector button:hover {
+    background-color: goldenrod;
 }
 
